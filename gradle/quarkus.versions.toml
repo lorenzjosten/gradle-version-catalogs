@@ -1,0 +1,30 @@
+[versions]
+quarkus-plugin = "2.4.0.Final"
+quarkus-platform = "2.4.0.CR1"
+
+[libraries]
+quarkus-platform = { module = "io.quarkus:quarkus-universe-bom", version.ref = "quarkus-platform" }
+quarkus-kotlin = { module = "io.quarkus:quarkus-kotlin" }
+quarkus-resteasy = { module = "io.quarkus:quarkus-resteasy-reactive" }
+quarkus-resteasy-jackson = { module = "io.quarkus:quarkus-resteasy-reactive-jackson" }
+quarkus-pg-client = { module = "io.quarkus:quarkus-reactive-pg-client" }
+quarkus-amqp = { module = "io.quarkus:quarkus-smallrye-reactive-messaging-amqp" }
+quarkus-minikube = { module = "io.quarkus:quarkus-minikube" }
+quarkus-arc = { module = "io.quarkus:quarkus-arc" }
+quarkus-junit = { module = "io.quarkus:quarkus-junit5" }
+
+[bundles]
+quarkus-basics = [
+    "quarkus-platform",
+    "quarkus-kotlin",
+    "quarkus-resteasy",
+    "quarkus-resteasy-jackson",
+    "quarkus-pg-client",
+    "quarkus-amqp",
+    "quarkus-minikube",
+    "quarkus-arc",
+    "quarkus-junit",
+]
+
+[plugins]
+quarkus = { id = "io.quarkus", version.ref = "quarkus-plugin" }
