@@ -6,10 +6,6 @@ plugins {
     `maven-publish`
 }
 
-repositories {
-    gradlePluginPortal()
-}
-
 publishing {
     publications {
         create<MavenPublication>("quarkus") {
